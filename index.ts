@@ -12,9 +12,8 @@ import packageJson from './package.json' with { type: 'json' };
 import { logoSixel, supportsSixel } from './lib/sixel.ts';
 
 async function init() {
-  const supportsSixelTerminal = await supportsSixel();
-  console.log();
-  if (supportsSixelTerminal) {
+  console.log(); // intentional blank line
+  if (supportsSixel) {
     console.log('   ' + logoSixel);
   }
   const language = await getLanguage(fileURLToPath(new URL('./locales', import.meta.url)));
