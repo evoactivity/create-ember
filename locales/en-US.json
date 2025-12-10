@@ -1,0 +1,84 @@
+{
+  "welcomeMessage": {
+    "message": "Welcome to the Ember.js project generator! We'll help you set up a \nnew Ember.js application or addon with your preferred configuration."
+  },
+  "projectName": {
+    "message": "Project Name:",
+    "invalidMessage": "Invalid project name"
+  },
+  "packageName": {
+    "message": "Package Name:",
+    "invalidMessage": "Invalid package name"
+  },
+  "selectTemplate": {
+    "message": "Select a template:"
+  },
+  "templateSelection": {
+    "message": "Select the type of project to create:",
+    "hint": "(↑/↓ to navigate, enter to confirm)",
+    "selectOptions": {
+      "app": {
+        "title": "Application",
+        "desc": "A standard Ember.js application"
+      },
+      "addon": {
+        "title": "Addon",
+        "desc": "An Ember.js addon"
+      }
+    }
+  },
+  "featureSelection": {
+    "message": "Select additional features to include",
+    "hint": "(↑/↓ to navigate, space to select, a to toggle all, enter to confirm)"
+  },
+  "needsTypeScript": {
+    "message": "Use TypeScript"
+  },
+  "needsGit": {
+    "message": "Initialize a Git repository"
+  },
+  "needsWarpDrive": {
+    "message": "Include Warp Drive (data library)"
+  },
+  "linting": {
+    "message": "Select linting tools to include",
+    "hint": "(↑/↓ to navigate, space to select, a to toggle all, enter to confirm)"
+  },
+  "needsPrettier": {
+    "message": "Prettier",
+    "hint": "Formatter - https://prettier.io/"
+  },
+  "needsEslint": {
+    "message": "ESLint",
+    "hint": "Linter - https://eslint.org/"
+  },
+  "needsStylelint": {
+    "message": "Stylelint",
+    "hint": "Linter - https://stylelint.io/"
+  },
+  "needsTemplateLint": {
+    "message": "Ember Template Lint",
+    "hint": "Linter - https://github.com/ember-template-lint/ember-template-lint/"
+  },
+  "testing": {
+    "message": "Select testing frameworks to include",
+    "hint": "(↑/↓ to navigate, enter to confirm)"
+  },
+  "needsQunit": {
+    "message": "QUnit",
+    "hint": "The default testing framework for Ember.js applications"
+  },
+  "needsVitest": {
+    "message": "Vitest",
+    "hint": "A fast unit testing framework"
+  },
+  "needsTailwind": {
+    "message": "Tailwind CSS"
+  },
+  "needsContinuousIntegration": {
+    "message": "Continuous Integration (CI) with GitHub Actions"
+  },
+  "projectCreated": {
+    "message": "'{projectName}' created successfully!"
+  }
+}

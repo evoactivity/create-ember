@@ -1,0 +1,63 @@
+{
+  "name": "create-ember",
+  "version": "0.0.1",
+  "description": "Generate scaffolding for Ember.js applications or addons.",
+  "main": "index.js",
+  "type": "module",
+  "bin": {
+    "create-ember": "bundle.js"
+  },
+  "scripts": {
+    "build": "rolldown -c rolldown.config.ts",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "lint": "eslint . --ext .ts",
+    "format": "prettier --write --experimental-cli .",
+    "prepare": "pnpm run build"
+  },
+  "imports": {
+    "#src/*": "./*",
+    "#lib/*": "./lib/*"
+  },
+  "files": [
+    "locales",
+    "bundle.js"
+  ],
+  "keywords": [
+    "ember",
+    "cli",
+    "tooling",
+    "create",
+    "create-ember",
+    "blueprints"
+  ],
+  "author": "",
+  "license": "MIT",
+  "packageManager": "pnpm@10.24.0",
+  "devDependencies": {
+    "@clack/prompts": "1.0.0-alpha.8",
+    "@eslint/js": "^9.39.1",
+    "@tsconfig/node24": "^24.0.3",
+    "@types/node": "^24.10.2",
+    "@vitest/ui": "4.0.15",
+    "commander": "^14.0.2",
+    "eslint": "^9.39.1",
+    "globals": "^16.5.0",
+    "gradient-string": "^3.0.0",
+    "picocolors": "^1.1.1",
+    "prettier": "^3.7.4",
+    "rolldown": "1.0.0-beta.53",
+    "typescript-eslint": "^8.49.0",
+    "vitest": "^4.0.15",
+    "zx": "^8.8.5"
+  },
+  "lint-staged": {
+    "*.{js,ts,vue,json}": [
+      "prettier --write --experimental-cli"
+    ]
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  }
+}
