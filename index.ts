@@ -12,10 +12,6 @@ import packageJson from './package.json' with { type: 'json' };
 import { logoSixel, supportsSixel } from './lib/sixel.ts';
 
 async function init() {
-  console.log(); // intentional blank line
-  if (supportsSixel) {
-    console.log('   ' + logoSixel);
-  }
   const language = await getLanguage(fileURLToPath(new URL('./locales', import.meta.url)));
 
   // Setup Commander
@@ -137,6 +133,11 @@ async function init() {
       hint: language.needsVitest.hint,
     },
   ] as const;
+
+  console.log(); // intentional blank line
+  if (supportsSixel) {
+    console.log('   ' + logoSixel);
+  }
 
   intro(isInteractive && hasColors ? pc.bold(gradientBanner) : defaultBanner);
 
