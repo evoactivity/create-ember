@@ -1,3 +1,7 @@
+> [!WARNING]
+> This currently doesn't do anything, you can't create Ember projects with it yet.
+> Just exploring the idea and what the UX might look like.
+
 # Create Ember
 
 > Generate scaffolding for Ember.js applications or addons
