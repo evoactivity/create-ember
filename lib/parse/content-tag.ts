@@ -1,0 +1,33 @@
+import {
+  type Parsed as ContentTag,
+  Preprocessor,
+  type PreprocessorOptions,
+  type Range,
+} from 'content-tag';
+
+const BufferMap = new Map<string, Buffer>();
+
+export function getBuffer(string_: string): Buffer {
+  let buffer = BufferMap.get(string_);
+
+  if (!buffer) {
+    buffer = Buffer.from(string_);
+    BufferMap.set(string_, buffer);
+  }
+
+  return buffer;
+}
+
+export function parse(file: string, options?: PreprocessorOptions): ContentTag[] {
+  const preprocessor = new Preprocessor();
+
+  return preprocessor.parse(file, options);
+}
+
+export function sliceByteRange(string_: string, indexStart: number, indexEnd?: number): string {
+  const buffer = getBuffer(string_);
+
+  return buffer.subarray(indexStart, indexEnd).toString();
+}
+
+export type { ContentTag, Range };
