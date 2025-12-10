@@ -269,11 +269,14 @@ For more information, run ${pc.bold('pnpm create ember --help')}`,
     );
   }
 
-  let endMessage = `✨🐹 ${language.projectCreated.message.replace(
-    '{projectName}',
-    pc.greenBright(pc.bold(result.projectName)),
-  )}`;
-  endMessage += `\n\n`;
+  log.success(
+    `✨🐹 ${language.projectCreated.message.replace(
+      '{projectName}',
+      pc.greenBright(pc.bold(result.projectName)),
+    )}`,
+  );
+
+  let endMessage = `Now you can get started with your new Ember project:\n\n`;
   endMessage += `   1) cd ${pc.blueBright(path.resolve(cwd, targetDir).replace(cwd, '').slice(1))}\n`;
   endMessage += `   2) pnpm install\n`;
   endMessage += `   3) pnpm dev\n\n`;
