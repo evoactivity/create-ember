@@ -49,8 +49,7 @@
     "prettier": "^3.7.4",
     "rolldown": "1.0.0-beta.53",
     "typescript-eslint": "^8.49.0",
-    "vitest": "^4.0.15",
-    "zx": "^8.8.5"
+    "vitest": "^4.0.15"
   },
   "lint-staged": {
     "*.{js,ts,vue,json}": [

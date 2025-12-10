@@ -6,9 +6,7 @@ import { defaultBanner } from '#lib/banners.ts';
 const gradientString = gradient(
   [
     { color: '#E04E39', pos: 0 },
-    { color: '#E04E39', pos: 0.2 },
-    { color: '#a811bfff', pos: 0.2 },
-    { color: '#ec3312ff', pos: 1 },
+    { color: '#e9c121', pos: 1 },
   ],
   { interpolation: 'hsv' },
 )(defaultBanner);
