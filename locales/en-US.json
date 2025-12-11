@@ -10,11 +10,8 @@
     "message": "Package Name:",
     "invalidMessage": "Invalid package name"
   },
-  "selectTemplate": {
-    "message": "Select a template:"
-  },
   "templateSelection": {
-    "message": "Select the type of project to create:",
+    "message": "Are you making an application or an addon?",
     "hint": "(↑/↓ to navigate, enter to confirm)",
     "selectOptions": {
       "app": {

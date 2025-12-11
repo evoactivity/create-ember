@@ -1,5 +1,6 @@
 import * as fs from 'node:fs';
 import * as path from 'node:path';
+import { fileURLToPath } from 'node:url';
 
 interface LanguageItem {
   hint?: string;
@@ -76,19 +77,19 @@ function linkLocale(locale: string) {
     }
   }
 
-  switch (linkedLocale) {
-    case 'zh-TW':
-    case 'zh-HK':
-    case 'zh-MO':
-      linkedLocale = 'zh-Hant';
-      break;
-    case 'zh-CN':
-    case 'zh-SG':
-      linkedLocale = 'zh-Hans';
-      break;
-    default:
-      linkedLocale = locale;
-  }
+  // switch (linkedLocale) {
+  //   case 'zh-TW':
+  //   case 'zh-HK':
+  //   case 'zh-MO':
+  //     linkedLocale = 'zh-Hant';
+  //     break;
+  //   case 'zh-CN':
+  //   case 'zh-SG':
+  //     linkedLocale = 'zh-Hans';
+  //     break;
+  //   default:
+  //     linkedLocale = locale;
+  // }
 
   return linkedLocale;
 }
@@ -113,7 +114,7 @@ async function loadLanguageFile(filePath: string): Promise<Language> {
   });
 }
 
-export default async function getLanguage(localesRoot: string) {
+export async function getLanguage(localesRoot: string) {
   const locale = getLocale();
 
   const languageFilePath = path.resolve(localesRoot, `${locale}.json`);
@@ -126,3 +127,5 @@ export default async function getLanguage(localesRoot: string) {
 
   return lang;
 }
+
+export const language = await getLanguage(fileURLToPath(new URL('../locales', import.meta.url)));
